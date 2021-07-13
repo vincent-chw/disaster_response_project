@@ -11,7 +11,8 @@ The dataset will then be used to train a machine learning classifier model using
 
 The trained model shall then be used to predict and classify unseen texts input. Inside the app folder, there is a python script run.py and templates folder. The templates folder contains html scripts to display a simple website dashboard in the Flask web app where you can enter a text sentence and have the machine learning model attempt to classify the sentence. Running the run.py file will initiate the dashboard. 
 
-
+Files provided by:
+https://appen.com/
 
 Libraries used:
 
