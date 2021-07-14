@@ -11,7 +11,7 @@ The dataset will then be used to train a machine learning classifier model using
 
 The trained model shall then be used to predict and classify unseen texts input. Inside the app folder, there is a python script run.py and templates folder. The templates folder contains html scripts to display a simple website dashboard in the Flask web app where you can enter a text sentence and have the machine learning model attempt to classify the sentence. Running the run.py file will initiate the dashboard. 
 
-To execute the entire pipeline, run the scripts below in the command prompt or terminal:
+To execute the entire pipeline, run the scripts below in the command prompt or terminal. Make sure all files are in their respective folders:
 
 Step 1:
 python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
