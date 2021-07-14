@@ -22,6 +22,9 @@ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 Step 3:
 python app/run.py
 
+Step 4:
+Go to http://0.0.0.0:3001/ to test out the web app. 
+
 Files provided by:
 https://appen.com/
 
