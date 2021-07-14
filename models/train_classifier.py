@@ -51,10 +51,20 @@ def tokenize(text):
 def build_model():
     # Create pipeline
     pipeline = Pipeline([('vect', CountVectorizer(tokenizer=tokenize)),
-                        ('tfidf', TfidfTransformer()),
-                        # ('multiclf', MultiOutputClassifier(RandomForestClassifier(n_estimators=100, criterion='gini')))])
-                        ('multiclf', MultiOutputClassifier(AdaBoostClassifier(n_estimators=500, learning_rate=0.5)))])
-    return pipeline
+                         ('tfidf', TfidfTransformer()),
+                         ('multiclf', MultiOutputClassifier(AdaBoostClassifier()))])
+    
+    # Perform GridSearchCV to locate best parameter
+    # Specify parameters for grid search
+    parameters = {
+        'multiclf__estimator__n_estimators': [100, 300],
+        'multiclf__estimator__learning_rate':[1.0, 0.5]
+    }
+    
+    # Initialize GridSearchCV to run with specified parameters
+    cv = GridSearchCV(pipeline, param_grid = parameters)
+    
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
