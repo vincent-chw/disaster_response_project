@@ -45,3 +45,6 @@ Python version = 3.6.3
 Numpy = 1.12.1
 
 Pandas = 0.23.3
+
+Github repo:
+https://github.com/vincent-chw/disaster_response_project
